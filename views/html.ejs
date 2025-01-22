@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="/weather.css">
+</head>
+<body>
+    <h1 class="head"><img src="/cloud.png">Weather App</h1>
+    <img src="/uniqueness.png" class="right-side">
+    <div class="container">
+
+    <div class="sub-container">  
+
+        <form method="post">
+            <input type="text" name="cityName" placeholder="enter a city">
+            <button type="submit"><img src="/search.png"></button>
+        </form>
+
+        <div class="mid-content">
+
+            <div class="content">
+                <img src="<%= i %>">
+                <h1><%= t ? t + "°C" : "0°C" %></h1>
+                <p><%= d ? d + "" : "Description" %></p>
+            </div>
+            
+        </div>
+
+        <div class="datas">
+
+            <div class="hum">
+                <h1><%= h ? h + "%" : "0%" %></h1>
+                <p>Humidity</p>
+                <img src="/humidity.png">
+            </div>
+        
+            <div class="wind">
+                <h1><%= w ? w + " km/h ": "0 km/h" %></h1>
+                <p>Wind Speed</p>
+                <img src="/wind.png">
+            </div>
+
+        </div>
+    </div>
+
+    </div>
+</body>
+</html>
